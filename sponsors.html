@@ -6,6 +6,7 @@
 <head> 
     <title>formulaslug</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <link rel="stylesheet" href="Sponsors.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,7 +45,12 @@
 
 <body> 
     <nav>
-        <ul class="nav">
+        <div class="hamburger" onclick="toggleNav()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav" id="nav">
             <li><a href="home_page.html">Home</a></li>
             <li><a href="how_to_join.html">How To Join?</a></li>
             <li><a href="what_is_FSAE.html">What Is FSAE?</a></li>
@@ -52,13 +58,13 @@
             <li><a href="photo_gallery.html">Photo Gallery</a></li>
             <li><a href="sponsors.html">Sponsors</a></li>
             <li><a href="Leadership.html">Leadership</a></li>
-                
+            
         </ul>
     </nav>
 
     <h1>Thank You to Our Sponsors!</h1> 
 
-    <p>Interested in Sponsoring Formula Slug? Here is our  &nbsp <a href="Sponsorship Packet 2024-25(1).pdf" target="_blank"> Sponsorship Packet </a> &nbsp with more information. </p>
+    <p>Interested in Sponsoring Formula Slug? Here is our  &nbsp <a href="Sponsorship Packet 2024-25.pdf" target="_blank"> Sponsorship Packet </a> &nbsp with more information. </p>
 
     
 
@@ -173,7 +179,7 @@
 
         <div class = "item">
             <!--img of person here-->
-            <div class="pictures"><img src="sponsor_images/Onshape_logo_full.png" alt="Onshape Logo" width="100%"></div>
+            <div class="pictures"><img src="sponsor_images/Onshape_logo_full.png" alt="Onshape Logo" width="300px"></div>
      
         </div>
 
@@ -238,7 +244,14 @@
 
 <div class="copyright">&copy;2024 Formula Slug</div>
     
-                
+<script>
+    function toggleNav() {
+            var navbar = document.getElementById("nav");
+            console.log("Hamburger clicked!"); // Debugging log to check if it runs
+            navbar.classList.toggle("show");
+        }
+        
+</script>   
                         
             
 </body>

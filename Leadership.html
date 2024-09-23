@@ -7,6 +7,9 @@
     
     <title>formulaslug</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="Leadership.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +50,12 @@
 
 <body> 
     <nav>
-        <ul class="nav">
+        <div class="hamburger" onclick="toggleNav()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav" id="nav">
             <li><a href="home_page.html">Home</a></li>
             <li><a href="how_to_join.html">How To Join?</a></li>
             <li><a href="what_is_FSAE.html">What Is FSAE?</a></li>
@@ -55,16 +63,17 @@
             <li><a href="photo_gallery.html">Photo Gallery</a></li>
             <li><a href="sponsors.html">Sponsors</a></li>
             <li><a href="Leadership.html">Leadership</a></li>
-                
+            
         </ul>
     </nav>
+
 
     <h1>Meet the Team</h1> 
     <!--Originally said "Our Team"-->
       
     
     
-    <h2 class="banner board">Board and Management</h2>
+    <div class="banner board"><h2>Board and Management</h2></div>
     <!--all the portraits for captains + management leads-->
     
     
@@ -187,7 +196,7 @@
 
     
 
-    <h2 class="banner electrical">Electrical</h2>
+    <div class="banner electrical"><h2>Electrical</h2></div>
     <!--leads for electrical with team photo-->
     
     <!--for future notice, the pictures are causing a gap in between the banner and content. the temporary fix for now is keeping the width <=80% -->
@@ -197,14 +206,11 @@
 
     <div class="flex-container electrical_flex">
 
-        <div class = "item">
-            <!--list of names here-->
-            
-            <p class ="lead_name"> <b>Andrew She</b> <em>Accumulator Lead</em></p>
-            <p class ="lead_name"> <b>Victor Kalastirsky </b> <em>Accumulator Hardware Lead</em></p>
-            
-            
+        <div class="item">
+            <p class="lead_name"><b>Andrew She</b> <em>Accumulator Lead</em></p>
+            <p class="lead_name"><b>Victor Kalastirsky</b> <em>Accumulator Hardware Lead</em></p>
         </div>
+        
         <div class = "item">
             <!--list of names here-->
 
@@ -245,7 +251,7 @@
     </div>
 
           
-    <h2 class="banner mechanical">Mechanical</h2>
+    <div class="banner mechanical"><h2>Mechanical</h2></div>
     <!--leads for mechanical with team photo-->
         
     <div class="pictures teampics"><img src="leadership_portraits/mechanical_default.jpg" alt="Team Picture of Mechanical" width="80%" ></div>
@@ -320,9 +326,11 @@
                 banner.style.top = `${navBarHeight}px`;
             })
         }
-        
-        window.addEventListener('load', stickyBanner);
+        if (window.innerWidth > 768) {
+            window.addEventListener('load', stickyBanner);
         window.addEventListener('resize', stickyBanner);
+        }
+        
     </script>
 
     <!--this script is for the name of the section sticking to the top of the page-->
@@ -354,6 +362,15 @@
         });
 
     </script>
+
+<script>
+    function toggleNav() {
+            var navbar = document.getElementById("nav");
+            console.log("Hamburger clicked!"); // Debugging log to check if it runs
+            navbar.classList.toggle("show");
+        }
+        
+</script> 
 
     
 <div class="socials">

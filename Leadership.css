@@ -4,6 +4,7 @@ body {
     box-sizing: border-box;;
     color: #e6e6e6;
     background-color: #141624;
+    overflow-x: hidden;
 }
 
 /* navy background color: #1b263b or #2c3e50 */
@@ -12,7 +13,7 @@ nav {
     width: 100%;
     z-index: 100;
     position: fixed;
-    top: 0px;
+    top: 0;
     left: 0; 
     background-color: #1B263B;
     
@@ -60,23 +61,67 @@ nav {
     transition: opacity 0.5s ease;
 }
 
+.hamburge {
+    display: none;
+}
 
 @media screen and (max-width: 600px) {
     .nav {
         flex-direction: column;
+        padding-bottom: 0;
     }
     .nav li {
         margin: 0;
     }
-
-    
 }
+
+@media screen and (max-width: 600px) {
+    .nav {
+        display: none; /* Initially hide the nav on small screens */
+        flex-direction: column;
+        padding-bottom: 0;
+        z-index: 4;
+    }
+
+    .nav.show {
+        display: flex; /* Show nav when hamburger is clicked */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger only on mobile */
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    .hamburger .line {
+        width: 100%;
+        height: 4px;
+        background-color: #e6e6e6;
+        margin: 2px 0;
+    }
+
+    .nav li {
+        margin: 10px 0;
+    }
+
+    .nav li .logo {
+        display: none; /* Optionally hide the logo on mobile */
+    }
+}
+
 
 
 h1 {
     display: flex;
     justify-content: center; 
     align-items: center; 
+    text-align: center;
     padding: 7% 0 1% 0;
     font-family: scandia-web;
     font-size: 3.5em;
@@ -111,7 +156,7 @@ h2 {
     position: -webkit-sticky; /* For Safari */
     
     
-    z-index: 101;  /* Ensures it appears above other content */
+    z-index: 99;  /* Ensures it appears above other content */
     
     transition: transform 0.5s ease-in-out;
 }
@@ -162,8 +207,9 @@ h2 {
     font-size: 1.50em;
     padding: 20px;
     color: #e6e6e6;
-    width: 250px;
+    width: 200px;
     height: 80px;
+    flex: 1 1 250px; 
     
     background-color: #1b263b;
     transition: transform 0.5s ease
@@ -212,7 +258,11 @@ h2 {
 }
 
 .electrical_flex {
-    width: 80%;
+    width: 95%;
+}
+
+.electrical_flex  > div{
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 600px) {
@@ -228,9 +278,22 @@ h2 {
         margin: 0 auto;
     }
 
+    .electrical_flex > div{
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 2.8em;
+    }
+
     h2 {
         font-size: 1.75em;
+        width: 80%;
+        text-align: center;
+
     }
+
+    
 
 }
 

@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     padding: 0;
@@ -5,6 +6,10 @@ body {
     color: #e6e6e6;
     background-color: #141624;
     overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
 }
 
 nav {
@@ -59,16 +64,50 @@ nav {
     transition: opacity 0.5s ease;
 }
 
+.hamburger {
+    display: none;
+}
+
+
 
 @media screen and (max-width: 600px) {
     .nav {
+        display: none; /* Initially hide the nav on small screens */
         flex-direction: column;
-    }
-    .nav li {
-        margin: 0;
+        padding-bottom: 0;
+        z-index: 4;
     }
 
-    
+    .nav.show {
+        display: flex; /* Show nav when hamburger is clicked */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger only on mobile */
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    .hamburger .line {
+        width: 100%;
+        height: 4px;
+        background-color: #e6e6e6;
+        margin: 2px 0;
+    }
+
+    .nav li {
+        margin: 10px 0;
+    }
+
+    .nav li .logo {
+        display: none; /* Optionally hide the logo on mobile */
+    }
 }
 
 
@@ -82,8 +121,6 @@ h1 {
     font-size: 3.5em;
     font-weight: bold;
 }
-
-
 
 
 h2 {
@@ -107,8 +144,10 @@ p {
     font-family: Roboto Condensed;
     font-size: 1.80em;
     padding: 1% 0 3% 2.5%;
+    margin-top: 2%;
     font-weight: bold;
     justify-content: center; 
+    background-color: #1B263B;
 
 }
 
@@ -119,6 +158,7 @@ p a:hover {
 
 p a:link {
     text-decoration: none;
+    color: #4ab1e4;
 }
 
 p a:visited { 
@@ -128,18 +168,18 @@ p a:visited {
 
 .sponsor_gold {
     border: 2px solid gold;
-    width: 400px;
+    width: max-content;
     
     
 }
 .sponsor_silver {
     border: 2px solid silver;
-    width: 400px;
+    width: max-content;
     
 }
 .sponsor_bronze {
     border: 2px solid #CD7F32;
-    width: 400px;
+    width: max-content;
     
 }
 
@@ -151,6 +191,8 @@ p a:visited {
     justify-content: center;
     align-items: center;
     max-width: 100%;
+    margin: 0 auto; /* Center container horizontally */
+    flex-wrap: wrap;
 
     
 }
@@ -158,9 +200,10 @@ p a:visited {
 .flex-container {
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
     padding: 3% 2% 3% 1%;
     max-width: 100%;
+    
     
     
 }
@@ -169,28 +212,40 @@ p a:visited {
     
     justify-content: center;
     align-items: center;
-    /*width: 33%;     this is for making it evenly distributed, but right now it messes with the centering of digikey */
-    padding: 0% 2% 0% 2%;   
+    padding: 0% 2% 0% 2%;
     max-width: 100%;
     
 }
 
 @media screen and (max-width: 768px) {
-    .flex-container {
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 2%;
-        max-width: 80%;
 
+
+    .flex-container {
+        flex-direction: column; /* Stack pictures vertically */
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 4%;
+        margin-bottom: 4%;
+        max-width: 90%; /* Adjust max-width for smaller screens */
     }
 
     .pictures {
-        max-width: 80%;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .pictures img {
+        max-width: 50%; /* Ensure images don't overflow the screen */
         height: auto;
+        margin-top: 4%;
+        margin-bottom: 4%;
     }
 
     p {
-        font-size: 0.80em;
+        font-size: 1.2em; /* Make font size smaller for mobile */
     }
 }
 

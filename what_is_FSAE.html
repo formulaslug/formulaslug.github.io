@@ -5,6 +5,9 @@
 
 <head> <!--this is metadata stuff, includes the title, corresponding css stylesheet, and any fonts we are using in the file-->
     <title>formulaslug</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
     <link rel="stylesheet" href="what_is_FSAE.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +42,12 @@
 
 <body> <!--everything else, like the actual writing, classes, bla bla-->
     <nav>
-        <ul class="nav">
+        <div class="hamburger" onclick="toggleNav()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav" id="nav">
             <li><a href="home_page.html">Home</a></li>
             <li><a href="how_to_join.html">How To Join?</a></li>
             <li><a href="what_is_FSAE.html">What Is FSAE?</a></li>
@@ -47,7 +55,7 @@
             <li><a href="photo_gallery.html">Photo Gallery</a></li>
             <li><a href="sponsors.html">Sponsors</a></li>
             <li><a href="Leadership.html">Leadership</a></li>
-                
+            
         </ul>
     </nav>
 
@@ -55,43 +63,46 @@
     <div class = "fsae_electric_pic"><h1>Formula SAE</h1> <!--change this bluh--></div>
 
     <div class="fsae_comp">
-        <div class = "half_divide">
+        <div class="flex-container">
+            <div class = "first_item">
 
-            <h1 class = "what_is_fsae">What is Formula SAE?</h1>
-                <p class = "fsae_desc">Formula SAE is a collegiate design competition organized by SAE (Society of Automotive Engineers) International. This design series is geared toward university-level automotive engineering projects, including an electric division, FSAE Electric.
-                    FSAE Electric features a weekend-long design competition for university teams to compete in their student-crafted electric race cars with each other. At the FSAE Electric competition, race cars are judged on their compliance with rules, student design, business sales presentation, and on-track performance.
-                </p>
-        
-        </div>
-        <div class = "half_divide">
-
-            <h1 class = "FS_involve"> How is Formula Slug Involved?</h1>
-                <p class = "involve_desc"> Formula Slug entered FSAE Electric in the Fall of 2015, producing our first electric vehicle, FS-0. Since then, FS-1 and FS-2 have been developed on a two-year design cycle, with FS-2 passing mechanical inspection! <br> 
-
-                    We are currently working on FS-2 before we begin designing FS-3 on a one-year design cycle.</p>
-                </p>
-        </div>
+                <h1 class = "what_is_fsae">What is Formula SAE?</h1>
+                    <p class = "fsae_desc">Formula SAE is a collegiate design competition organized by SAE (Society of Automotive Engineers) International. This design series is geared toward university-level automotive engineering projects, including an electric division, FSAE Electric.
+                        FSAE Electric features a weekend-long design competition for university teams to compete in their student-crafted electric race cars with each other. At the FSAE Electric competition, race cars are judged on their compliance with rules, student design, business sales presentation, and on-track performance.
+                    </p>
+            
+            </div>
+            <div class = "second_item">
     
-
+                <h1 class = "FS_involve"> How is Formula Slug Involved?</h1>
+                    <p class = "involve_desc"> Formula Slug entered FSAE Electric in the Fall of 2015, producing our first electric vehicle, FS-0. Since then, FS-1 and FS-2 have been developed on a two-year design cycle, with FS-2 passing mechanical inspection! <br> 
+    
+                        We are currently working on FS-2 before we begin designing FS-3 on a one-year design cycle.</p>
+                    </p>
+            </div>
+        </div>
         
+    
         <div class="designs">
             <h1 class = "FS_design_intro"> Here are our past designs:</h1>
             <div class="flex-container">
                 <div class="first_item">
-                <h3 class ="FS_design_title">FS-2: </h3>
+                    <h3 class ="FS_design_title">FS-2: </h3>
 
-                <p class = "FS_design_brief">
-                    FS-2 is our most recent design, developed from 2022 to 2024. The car competed at the SAE Formula 2024 Competition in Michigan and passed mechanical inspection! Currently, Formula Slug is continuing to work on FS-2 in preparation for the development of FS-3.
-                <!--on the left side of each blurb, i wanna have some photo to make it more interesting if possible!-->
-                </p>
-                <p class = "design_topic">
-                    <b> Motor Type:</b>  Zero ZF75-10 <br>
-                    <b> Motor Count:</b>  Single inboard motor <br>
-                    <b> Max Speed:</b>  100mph <br>
-                    <b> Max Voltage:</b>  117.6V <br>
-                    <b> Power:</b>  80kW <br>
-                    <b> Car Mass:</b>  509 lbs 
-                </p>
+                    <p class = "FS_design_brief">
+                        FS-2 is our most recent design, developed from 2022 to 2024. The car competed at the SAE Formula 2024 Competition in Michigan and passed mechanical inspection! Currently, Formula Slug is continuing to work on FS-2 in preparation for the development of FS-3.
+                    <!--on the left side of each blurb, i wanna have some photo to make it more interesting if possible!-->
+                    </p>
+                    <ul class = "design_topic" id="design_topic">
+                        <li><b> Motor Type:</b>  Zero ZF75-10 </li>
+                        <li><b> Motor Count:</b>  Single inboard motor </li>
+                        <li><b> Max Speed:</b>  100mph </li>
+                        <li><b> Max Voltage:</b>  117.6V </li>
+                        <li><b> Power:</b>  80kW </li>
+                        <li><b> Car Mass:</b>  509 lbs </li>
+                                               
+                        
+                    </ul>
                 </div>
                 <div class = "second_item"><br>
                     <img src="FS2_photoshoot.jpg" width="100%">
@@ -107,15 +118,17 @@
                         FS-1 is the second racecar designed by Formula Slug from 2017 to 2019. The car competed at the SAE Formula Electric 2019 Competition, marking the second time Formula Slug went to competition. FS-1 was recently scrapped for parts in preparation for FS-2, our most recent racecar.
                         <!--on the left side of each blurb, i wanna have some photo to make it more interesting if possible!-->
                     </p>
-                    <p class = "design_topic">
-                        <b> Motor Type:</b>  Zero ZF75-5 <br>
-                        <b> Motor Count:</b>  Dual Motor <br>
-                        <b> Max Speed:</b>  46.6028 mph <br>
-                        <b> Max Voltage:</b>  117.6V <br>
-                        <b> Power:</b>  50.0 kW<br>
-                        <b> Car Mass:</b>  430 lbs 
-                    </p>
-            
+
+                    <ul class = "design_topic" id="design_topic">
+                        <li><b> Motor Type:</b>  Zero ZF75-5 </li>
+                        <li><b> Motor Count:</b>  Dual Motor </li>
+                        <li><b> Max Speed:</b>  46.6028 mph </li>
+                        <li><b> Max Voltage:</b>  117.6V </li>
+                        <li><b> Power:</b>  50.0 kW<br> </li>
+                        <li><b> Car Mass:</b>  430 lbs </li>
+                                               
+                        
+                    </ul>
                 </div>
                 <div class = "second_item"><br>
                     <img src="FS1_FirstDrive.jpg" width="100%">
@@ -134,17 +147,20 @@
                         FS-0 is the first racecar developed by Formula Slug back in 2014. Even though the car did not compete, it was an important learning journey as the team navigated through various obstacles, including the novelty of everything they were manufacturing.
                         <!--on the left side of each blurb, i wanna have some photo to make it more interesting if possible!-->
                     </p>
-                    <p class = "design_topic">
-                        <b> Motor Type:</b>  Zero ZF75-5 <br>
-                        <b> Motor Count:</b>  Dual Motor <br>
-                        <b> Max Speed:</b>  45 mph <br>
-                        <b> Max Voltage:</b>  300V <br>
-                        <b> Power:</b> 34.3kW <br>
-                        <b> Car Mass:</b>  440.925 lbs
-                    </p>
+                    
+                    <ul class = "design_topic" id="design_topic">
+                        <li><b> Motor Type:</b>  Zero ZF75-5 </li>
+                        <li><b> Motor Count:</b>  Dual Motor </li>
+                        <li><b> Max Speed:</b>  45 mph </li>
+                        <li><b> Max Voltage:</b>  300V </li>
+                        <li><b> Power:</b> 34.3kW </li>
+                        <li><b> Car Mass:</b>  440.925 lbs </li>
+                                               
+                        
+                    </ul>
                 </div>
                 <div class = "second_item"><br>
-                    <iframe width="100%" height="90%" src="https://www.youtube.com/embed/W2YDWzCsP7c?si=CXQA18SXISWJMIZH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="100%" src="https://www.youtube.com/embed/W2YDWzCsP7c?si=CXQA18SXISWJMIZH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen width="100%" height="80%"> </iframe>
                     <p>Linked is "We Are Formula Slug" - a documentary about the newly established Formula Slug and their journey with FS-0.</p>
                 </div>
             
@@ -163,10 +179,16 @@
 
         <div class="copyright">&copy;2024 Formula Slug</div>
     </div>
-        
-    
-                
-                        
+
+    <script>
+        function toggleNav() {
+                var navbar = document.getElementById("nav");
+                console.log("Hamburger clicked!"); // Debugging log to check if it runs
+                navbar.classList.toggle("show");
+            }
+            
+    </script>  
+             
             
 </body>
 
