@@ -1,0 +1,264 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #e6e6e6;
+    background-color: #141624;
+    overflow-x: hidden;
+}
+
+nav {
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    background-color: #1B263B;
+    
+}
+
+.nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.nav li {
+    flex: 1;
+    text-align: center;
+    padding: 1% 0 .5% 0;
+    justify-content: center;
+
+}
+
+.nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e6e6e6;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: scandia-web;
+    font-weight: bold;
+}
+
+
+.nav a img {
+    width: 2%; /* Adjust as needed */
+    height: 2%; /* Adjust as needed */
+}
+
+
+
+.nav a:hover {
+    opacity: 0.5; /* Adjust opacity value here */
+    transition: opacity 0.5s ease;
+}
+
+
+@media screen and (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+    }
+    .nav li {
+        margin: 0;
+    }
+
+    
+}
+
+
+h1 {
+    display: flex;
+    
+    justify-content: center; 
+    align-items: center; 
+    padding: 10% 0 .5% 0;
+    font-family: scandia-web;
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+
+
+
+h2 {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    font-family: scandia-web;
+    font-size: 2.55em;
+    font-weight: bold;
+    padding: 2% 2% 2% 2%;
+    
+    margin: 0 auto;
+    
+    
+    
+    
+}
+
+p {
+    display: flex;
+    font-family: Roboto Condensed;
+    font-size: 1.80em;
+    padding: 1% 0 3% 2.5%;
+    font-weight: bold;
+    justify-content: center; 
+
+}
+
+p a:hover {
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+}
+
+p a:link {
+    text-decoration: none;
+}
+
+p a:visited { 
+    text-decoration: none; 
+    color: #4ab1e4;
+} 
+
+.sponsor_gold {
+    border: 2px solid gold;
+    width: 400px;
+    
+    
+}
+.sponsor_silver {
+    border: 2px solid silver;
+    width: 400px;
+    
+}
+.sponsor_bronze {
+    border: 2px solid #CD7F32;
+    width: 400px;
+    
+}
+
+
+
+.pictures {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+
+    
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    padding: 3% 2% 3% 1%;
+    max-width: 100%;
+    
+    
+}
+
+.flex-container > div {
+    
+    justify-content: center;
+    align-items: center;
+    /*width: 33%;     this is for making it evenly distributed, but right now it messes with the centering of digikey */
+    padding: 0% 2% 0% 2%;   
+    max-width: 100%;
+    
+}
+
+@media screen and (max-width: 768px) {
+    .flex-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 2%;
+        max-width: 80%;
+
+    }
+
+    .pictures {
+        max-width: 80%;
+        height: auto;
+    }
+
+    p {
+        font-size: 0.80em;
+    }
+}
+
+
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 1% 2.5% 10% 2.5%;
+    align-items: center;
+}
+
+
+.email {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 2vh; 
+    font-family: Titillium Web;
+    font-size: 1.30em;
+    font-weight: bold;
+    padding: 5% 0 .5% 0;
+}
+
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 2% 2% 2% 2%;
+    background-color: #1B263B;
+    z-index: 2;
+}
+
+.socials a {
+    transition: opacity 0.5s ease;
+}
+
+.socials a:hover {
+    opacity: 50%;
+}
+
+.insta {
+    padding: 0 0.5% 0 0.5%;
+}
+
+.youtube {
+    padding: 0 0.5% 0 0.5%;
+}
+
+.mail {
+    padding: 0 0.5% 0 0.5%;
+}
+
+.linked {
+    padding: 0 0.5% 0 0.5%;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Scandia;
+    font-style: italic;
+    font-size: 1em;
+    padding: 1% 0;
+}

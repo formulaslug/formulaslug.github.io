@@ -1,0 +1,321 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;;
+    color: #e6e6e6;
+    background-color: #141624;
+}
+
+/* navy background color: #1b263b or #2c3e50 */
+
+nav {
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 0px;
+    left: 0; 
+    background-color: #1B263B;
+    
+}
+
+.nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.nav li {
+    flex: 1;
+    text-align: center;
+    padding: 1% 0 .5% 0;
+    justify-content: center;
+
+}
+
+.nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e6e6e6;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: scandia-web;
+    font-weight: bold;
+}
+
+
+.nav a img {
+    width: 2%; /* Adjust as needed */
+    height: 2%; /* Adjust as needed */
+}
+
+
+
+.nav a:hover {
+    opacity: 0.5; /* Adjust opacity value here */
+    transition: opacity 0.5s ease;
+}
+
+
+@media screen and (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+    }
+    .nav li {
+        margin: 0;
+    }
+
+    
+}
+
+
+h1 {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 7% 0 1% 0;
+    font-family: scandia-web;
+    font-size: 3.5em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+
+
+h2 {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    font-family: scandia-web;
+    font-size: 2.80em;
+    font-weight: bold;
+    
+    padding: 20px;
+    opacity: 100%;
+    color: #e6e6e6;
+    
+    
+    
+}
+
+.banner {
+    margin: 0 auto; 
+    background-color: #21374d;
+    text-align: center;
+    top: 0px; /* will change with javascript?*/
+    position: -webkit-sticky; /* For Safari */
+    
+    
+    z-index: 101;  /* Ensures it appears above other content */
+    
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+.banner.visible {
+    position:sticky;
+    
+    top: 0px;
+    transform: translateY(0%);  
+    
+}
+
+.banner.hidden {
+    
+    position: static;
+    
+}
+
+
+.member_title {
+    display: flex;
+    font-family: Roboto Condensed;
+    font-size: 1.70em;
+    padding: 1% 0 0.5% 2.5%;
+    font-weight: bold;
+    color: #e6e6e6;
+    justify-content: center;
+     
+}
+
+.member_name {
+    display: flex;
+    font-family: Roboto Condensed;
+    font-size: 1.50em;
+    padding: 1% 0 0.5% 2.5%;
+    font-weight: bold;
+    color: #e6e6e6;
+    justify-content: center;
+    
+}
+
+.lead_name {
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto Condensed;
+    font-size: 1.50em;
+    padding: 20px;
+    color: #e6e6e6;
+    width: 250px;
+    height: 80px;
+    
+    background-color: #1b263b;
+    transition: transform 0.5s ease
+    
+}
+
+
+
+.lead_name:hover {
+    transform: scale(1.1);
+}
+
+.pictures {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.teampics {
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+}
+
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    
+    width: 70%;
+    margin: 2% auto;
+    
+    
+}
+
+
+.flex-container > div {
+    margin: 20px;
+    padding: 0% 1% 0% 1%;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.electrical_flex {
+    width: 80%;
+}
+
+@media screen and (max-width: 600px) {
+    .flex-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        max-width: 80%;
+
+    }
+
+    .electrical_flex {
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 1.75em;
+    }
+
+}
+
+.portrait {
+    flex: 1 1 250px; 
+    
+    border: 2px solid #1b263b; /* Adds a border around the box */
+    padding: 10px;           /*Space inside the border */
+    width: 200px;           /* Width of the box */
+    background-color: #1b263b; /* Background color for the box */
+    text-align: center;     /* Center text and image */
+    margin: 10px auto;
+    transition: transform 0.5s ease;
+    
+}
+
+.portrait:hover {
+    transform: scale(1.1);
+}
+
+
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 1% 2.5% 10% 2.5%;
+    align-items: center;
+}
+
+
+.email {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 2vh; 
+    font-family: Titillium Web;
+    font-size: 1.30em;
+    font-weight: bold;
+    padding: 5% 0 .5% 0;
+}
+
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 2% 2% 2% 2%;
+    background-color: #1B263B;
+    z-index: 2;
+}
+
+.socials a {
+    transition: opacity 0.5s ease;
+}
+
+.socials a:hover {
+    opacity: 50%;
+}
+
+.insta {
+    padding: 0 0.5% 0 0.5%;
+}
+
+.youtube {
+    padding: 0 0.5% 0 0.5%;
+}
+
+.mail {
+    padding: 0 0.5% 0 0.5%;
+}
+
+.linked {
+    padding: 0 0.5% 0 0.5%;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Scandia;
+    font-style: italic;
+    font-size: 1em;
+    padding: 1% 0;
+}

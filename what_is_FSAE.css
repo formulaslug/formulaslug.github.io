@@ -1,0 +1,283 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #e6e6e6;
+    background-color: #141624;
+}
+
+nav {
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    background-color: #1B263B;
+    
+}
+
+.nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.nav li {
+    flex: 1;
+    text-align: center;
+    padding: 1% 0 .5% 0;
+    justify-content: center;
+
+}
+
+.nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e6e6e6;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: scandia-web;
+    font-weight: bold;
+}
+
+
+.nav a img {
+    width: 2%; /* Adjust as needed */
+    height: 2%; /* Adjust as needed */
+}
+
+
+
+.nav a:hover {
+    opacity: 0.5; /* Adjust opacity value here */
+    transition: opacity 0.5s ease;
+}
+
+
+@media screen and (max-width: 600px) {
+    .nav {
+        flex-direction: column;
+    }
+    .nav li {
+        margin: 0;
+    }
+}
+
+h1 {
+    display: flex;
+    color: white;
+    text-shadow: 3px 3px #141624;
+    
+    justify-content: center; 
+    align-items: center; 
+    padding: 5% 0 .5% 0;
+    font-family: scandia-web;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 3.5em;
+}
+
+p {
+    font-family: Roboto Condensed;
+    font-size: 1.25em;
+    
+}
+
+.fsae_electric_pic {
+    top: 10%;
+    width: 100%;
+    height: 700px;
+    background-image: url(SAE_formula_electric_image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;    
+    z-index: 1;
+    animation: fadein 2s;
+    
+}
+
+.fsae_comp {
+    position: relative;
+    z-index: 50;
+    margin-top: 60vh;
+    background-color: #141624;
+    color: #e6e6e6;
+}
+
+@keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.what_is_fsae {
+    display: flex;
+    align-items: left; 
+    font-family: scandia-web;
+    font-size: 1.95em;
+    font-weight: bold;
+    padding: 3% 0 0 2.5%;
+}
+
+.fsae_desc {
+    display: flex;
+    align-items: left; 
+    font-family: Roboto Condensed;
+    font-size: 1.65em;
+    padding: 1.5% 4.5% 2% 5%;
+    line-height: 1.75;
+    opacity: 80%;
+}
+
+
+.FS_involve {
+    display: flex;
+    align-items: left; 
+    font-family: scandia-web;
+    font-size: 1.95em;
+    font-weight: bold;
+    padding: 1.5% 4.5% 2% 5%;
+    background-color: #141624;
+}
+
+.involve_desc {
+    display: flex;
+    align-items: left; 
+    font-family: Roboto Condensed;
+    font-size: 1.65em;
+    padding: 1.5% 4.5% 2% 2.5%;
+    line-height: 1.75;
+    opacity: 80%;
+    background-color: #141624;
+}
+
+.FS_design_intro {
+    z-index: 50;
+    display: flex;
+    align-items: left; 
+    font-family: scandia-web;
+    font-size: 2.9em;
+    font-weight: bold;
+    padding: 3% 0 0 2.5%;
+    background-color: #141624;
+}
+
+.FS_design_title {
+    z-index: 50;
+    display: flex;
+    font-family: Roboto Condensed;
+    font-size: 1.80em;
+    padding: 1% 0 0.5% 2.5%;
+    font-weight: bold;
+    background-color: #141624;
+}
+
+.FS_design_brief {
+    z-index: 50;
+    display: flex;
+    font-family: Roboto Condensed;
+    font-size: 1.65em;
+    padding: 1% 0 0.5% 2.5%;
+    background-color: #141624;
+}
+
+.design_topic {
+    z-index: 50;
+    display: contents;
+    font-family: Roboto Condensed;
+    font-size: 1.65em;
+    padding: 1% 0 0.5% 2.5%;
+    white-space: pre;
+    font-weight: light;
+    background-color: #141624;
+}
+
+.half_divide {
+    width: 49.8%;
+    display: inline-block;
+    
+}
+
+.designs {
+    position: relative;
+    z-index: 50;
+    
+    background-color: #141624;
+    color: #e6e6e6;
+}
+
+.flex-container {
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    padding: 1% 2% 2% 1%;
+    background-color: #141624;
+}
+
+.flex-container > div {
+    z-index: 50;
+    width: 46%;
+    padding: 0% 1% 0% 1%;
+    background-color: #141624;
+}
+
+.email {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 2vh; 
+    font-family: Titillium Web;
+    font-size: 1.30em;
+    font-weight: bold;
+    padding: 5% 0 .5% 0;
+}
+
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 2% 2% 2% 2%;
+    background-color: #1B263B;
+    z-index: 2;
+}
+
+.socials a {
+    transition: opacity 0.5s ease;
+}
+
+.socials a:hover {
+    opacity: 50%;
+}
+
+.insta {
+    padding: 0 0.5% 0 0.5%;
+}
+
+.youtube {
+    padding: 0 0.5% 0 0.5%;
+}
+
+.mail {
+    padding: 0 0.5% 0 0.5%;
+}
+
+.linked {
+    padding: 0 0.5% 0 0.5%;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Scandia;
+    font-style: italic;
+    font-size: 1em;
+    padding: 1% 0;
+}
