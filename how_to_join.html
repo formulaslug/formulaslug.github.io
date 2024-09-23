@@ -35,23 +35,29 @@
         @import url("https://use.typekit.net/vbl8jxf.css");
     </style>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
 <body>
 
-<nav>
-    <ul class="nav">
-        <li><a href="home_page.html">Home</a></li>
-        <li><a href="how_to_join.html">How To Join?</a></li>
-        <li><a href="what_is_FSAE.html">What Is FSAE?</a></li>
-        <li><div class="logo"><img src="FSexpandedLogoWriting.png" alt="Formula Slug Logo" width = "200"></div></li>
-        <li><a href="photo_gallery.html">Photo Gallery</a></li>
-        <li><a href="sponsors.html">Sponsors</a></li>
-        <li><a href="Leadership.html">Leadership</a></li>
+    <nav> 
+        <div class="hamburger" onclick="toggleNav()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav" id="nav">
+            <li><a href="home_page.html">Home</a></li>
+            <li><a href="how_to_join.html">How To Join?</a></li>
+            <li><a href="what_is_FSAE.html">What Is FSAE?</a></li>
+            <li><div class="logo"><img src="FSexpandedLogoWriting.png" alt="Formula Slug Logo" width = "200"></div></li>
+            <li><a href="photo_gallery.html">Photo Gallery</a></li>
+            <li><a href="sponsors.html">Sponsors</a></li>
+            <li><a href="Leadership.html">Leadership</a></li>
             
-    </ul>
-</nav>
+        </ul>
+    </nav>
 
 
 <h1>How To Get Involved?</h1>
@@ -72,7 +78,7 @@
         <p class="question">Do you have any questions about joining Formula Slug? We are happy to answer all questions, suggestions, donation requests, membership info, and more.</p>
         <p class="question">Shoot us a message here and we will get back to you within 3-5 business days.</p>
         <div class="button2_center">
-            <a href="mailto:formulaslug@ucsc.edu" target="_blank"><button type="button" class="button2">Click Here to Message Us!</button></a>
+            <a href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=formulaslug@gmail.com&tf=1" target="_blank"><button type="button" class="button2">Click Here to Message Us!</button></a>
         </div>
     </div>
 </div>
@@ -97,7 +103,9 @@
                 Santa Cruz, CA 95064</p>
     </div>
     <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.394883365923!2d-122.06577152415252!3d37.000374772190796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e417502c7c437%3A0xf27a928657011485!2s606%20Engineering%20Loop%2C%20Santa%20Cruz%2C%20CA%2095064!5e0!3m2!1sen!2sus!4v1723499778878!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.394883365923!2d-122.06577152415252!3d37.000374772190796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e417502c7c437%3A0xf27a928657011485!2s606%20Engineering%20Loop%2C%20Santa%20Cruz%2C%20CA%2095064!5e0!3m2!1sen!2sus!4v1723499778878!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>    
     </div>
 </div>
 
@@ -116,7 +124,13 @@
 <div class="schedule-container">
     <h2 class="schedule">Work and Meeting Schedule</h2>
     <div class="calender">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&bgcolor=%23ffffff&src=cWk0anE0MjNqNXQ0NHE2bDhjdjMxZWpyYjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=Zm9ybXVsYXNsdWdAZ21haWwuY29t&color=%23AD1457&color=%237986CB" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        <div class="calendar-container">
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&bgcolor=%23ffffff&src=cWk0anE0MjNqNXQ0NHE2bDhjdjMxZWpyYjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=Zm9ybXVsYXNsdWdAZ21haWwuY29t&color=%23AD1457&color=%237986CB" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div class="link-container">
+            <p class="calendar-mobile">See this link for our full meetings and event schedule!</p>
+            <div class="calendar-link"><a href="https://calendar.google.com/calendar/u/0?cid=Zm9ybXVsYXNsdWdAZ21haWwuY29t" target=_blank>FS Calendar</a></div>
+        </div>
     </div>
 </div>
 
@@ -128,6 +142,16 @@
 </div>               
 
 <div class="copyright">&copy;2024 Formula Slug</div>
+
+
+<script>
+    function toggleNav() {
+            var navbar = document.getElementById("nav");
+            console.log("Hamburger clicked!"); // Debugging log to check if it runs
+            navbar.classList.toggle("show");
+        }
+        
+</script>
 
 </body> 
 

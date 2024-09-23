@@ -37,14 +37,20 @@
         @import url("https://use.typekit.net/vbl8jxf.css");
     </style>
 
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 
 
 <body>
     <nav>
-        <ul class="nav">
+        <div class="hamburger" onclick="toggleNav()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <ul class="nav" id="nav">
             <li><a href="home_page.html">Home</a></li>
             <li><a href="how_to_join.html">How To Join?</a></li>
             <li><a href="what_is_FSAE.html">What Is FSAE?</a></li>
@@ -126,6 +132,15 @@
 </div>      
 
 <div class="copyright">&copy;2024 Formula Slug</div>
+
+<script>
+    function toggleNav() {
+            var navbar = document.getElementById("nav");
+            console.log("Hamburger clicked!"); // Debugging log to check if it runs
+            navbar.classList.toggle("show");
+        }  
+</script>
+
 
 </body>
 
