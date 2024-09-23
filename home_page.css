@@ -58,7 +58,7 @@ nav {
     transition: opacity 0.5s ease;
 }
 
-.hamburge {
+.hamburger {
     display: none;
 }
 
@@ -371,4 +371,85 @@ h2 {
     font-style: italic;
     font-size: 1em;
     padding: 1% 0;
+}
+
+
+@media screen and (max-width: 600px) {
+    .newsletter {
+        font-size: 1em; /* Adjusted for smaller screens */
+        top: 0; /* More space for the fixed element */
+    }
+
+    .intro-container {
+        height: 60vh; /* Reduce the height of the intro on mobile */
+        background-size: contain; /* Ensure the background image is contained */
+        margin-top: 0;
+    }
+
+    .text-overlay {
+        font-size: 1em; /* Reduce overlay text size */
+        top: 10%; /* Adjust vertical position */
+        padding: 0 5%; /* Add padding to ensure text doesn't go to the edges */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Reduce size for mobile */
+        padding: 30% 0 0 0; /* Adjust padding */
+
+    }
+
+    .intro {
+        font-size: .8em; 
+        padding: 2% 4%; 
+        max-width: 90%;
+        line-height: 1.1;
+        top: 25%;
+    }
+
+    .never_has_there {
+        font-size: 1em; /* Smaller font for subtitle */
+        margin-top: -6%; /* Adjust negative margin */
+        padding-bottom: 4%;
+        text-shadow: 2px 2px #141624;
+    }
+
+    .main-section {
+        margin-top: 90%; /* Adjust the margin to match reduced intro-container height */
+        padding: 3% 4%; /* Adjust padding */
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    .p1, .p2 {
+        font-size: .8em; /* Reduce text size */
+        padding: 2% 3%; /* Add padding for readability */
+    }
+
+    /* Adjust the flex layout */
+    .flex {
+        flex-direction: column; /* Stack the items vertically on mobile */
+        gap: 5%; /* Add gap between flex items */
+        align-items: center; /* Center the items horizontally */
+    }
+
+    .team_pic {
+        margin-left: 0; /* Remove left margin */
+        width: 100%; /* Full width on mobile */
+        padding-bottom: 4%;
+    }
+
+    .socials {
+        flex-direction: row; /* Stack social icons */
+        padding: 5% 0; /* Increase padding */
+    }
+
+    .socials a img {
+        width: 30px; /* Reduce icon size */
+    }
+
+    .copyright {
+        font-size: 0.8em; /* Smaller copyright text */
+    }
 }
