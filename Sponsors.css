@@ -1,4 +1,7 @@
-
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
 body {
     margin: 0;
     padding: 0;
@@ -139,12 +142,13 @@ h2 {
     
 }
 
-p {
+.sponsorpacket {
     display: flex;
     font-family: Roboto Condensed;
     font-size: 1.80em;
-    padding: 1% 0 3% 2.5%;
+    
     margin-top: 2%;
+    margin-bottom: 2%;
     font-weight: bold;
     justify-content: center; 
     background-color: #1B263B;
@@ -217,7 +221,7 @@ p a:visited {
     
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
 
 
     .flex-container {
@@ -244,8 +248,33 @@ p a:visited {
         margin-bottom: 4%;
     }
 
+    h1 {
+        font-size: 1.75em;
+    }
+
+    h2 {
+        font-size: 1.75em;
+        text-align: center;
+        margin-top: 1%;
+    }
+
     p {
-        font-size: 1.2em; /* Make font size smaller for mobile */
+        font-size: 1.5em; /* Make font size smaller for mobile */
+        margin: 0 auto;
+    }
+
+    .sponsorpacket {
+        display: flex;
+        font-family: Roboto Condensed;
+        font-size: 1em;
+        display: flex;
+        flex-direction: column;
+        
+        padding: 2%;
+        font-weight: bold;
+        justify-content: center; 
+        background-color: #1B263B;
+    
     }
 }
 
@@ -314,6 +343,21 @@ p a:visited {
     justify-content: center;
     font-family: Scandia;
     font-style: italic;
-    font-size: 1em;
+    font-size: 0.8em;
     padding: 1% 0;
+}
+
+@media screen and (max-width: 600px) {
+    .socials {
+        flex-direction: row; /* Stack social icons */
+        padding: 5% 0; /* Increase padding */
+    }
+
+    .socials a img {
+        width: 30px; /* Reduce icon size */
+    }
+
+    .copyright {
+        font-size: 0.8em; /* Smaller copyright text */
+    }
 }

@@ -283,14 +283,18 @@ h2 {
     }
 
     h1 {
-        font-size: 2.8em;
+        font-size: 2em;
     }
 
     h2 {
-        font-size: 1.75em;
+        font-size: 1.5em;
         width: 80%;
         text-align: center;
 
+    }
+
+    .lead_name {
+        font-size: 1.2em;
     }
 
     
@@ -381,4 +385,19 @@ h2 {
     font-style: italic;
     font-size: 1em;
     padding: 1% 0;
+}
+
+@media screen and (max-width: 600px) {
+    .socials {
+        flex-direction: row; /* Stack social icons */
+        padding: 5% 0; /* Increase padding */
+    }
+
+    .socials a img {
+        width: 30px; /* Reduce icon size */
+    }
+
+    .copyright {
+        font-size: 0.8em; /* Smaller copyright text */
+    }
 }

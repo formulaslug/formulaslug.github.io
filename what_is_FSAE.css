@@ -301,11 +301,34 @@ p {
 
 @media screen and (max-width: 760px) {
 
-    .FS_design_intro {
-        font-size: 2.4em;
+    .fsae_electric_pic {
+        font-size: 1.8em;
+    }
+
+    .what_is_fsae {
+        font-size: 1.75em;
+    }
+
+    .fsae_desc {
+        font-size: 1em;
+    }
+
+    .FS_involve {
+        font-size: 1.75em;
+    }
+
+    .involve_desc {
+        font-size: 1em;
+    }
+
+    .FS_design_intro, .FS_design_title {
+        font-size: 1.5em;
         width: max-content;
         max-width: 100%;
+        text-align: center;
     }
+
+    
 
 
     .flex-container {
@@ -326,10 +349,11 @@ p {
         
     }
 
-    .first_item {
-        display: flex;
-        flex-direction: column;
+    .FS_design_brief, .design_topic, p {
+        font-size: 1em;
     }
+
+
 
     .second_item img{
         width: 100%;
@@ -339,6 +363,10 @@ p {
 
     .second_item iframe {
         height: 30vh;
+    }
+
+    .second_item p {
+        font-size: 1em;
     }
 
     .design_topic li {
@@ -410,4 +438,19 @@ p {
     font-style: italic;
     font-size: 1em;
     padding: 1% 0;
+}
+
+@media screen and (max-width: 600px) {
+    .socials {
+        flex-direction: row; /* Stack social icons */
+        padding: 5% 0; /* Increase padding */
+    }
+
+    .socials a img {
+        width: 30px; /* Reduce icon size */
+    }
+
+    .copyright {
+        font-size: 0.8em; /* Smaller copyright text */
+    }
 }
