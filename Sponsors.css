@@ -217,6 +217,14 @@ p a:visited {
     
 }
 
+.medal {
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+      
+}
+
 
 
 .flex-container > div {
