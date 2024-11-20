@@ -82,7 +82,7 @@
 </div>
 
 <!--GIVING DAY ADDITIONS START HERE -->
-<button id="openPopup">Open Popup</button>
+
 
   <!-- The Popup -->
   <div id="popup" class="popup hidden">
@@ -144,14 +144,10 @@
         
 
         // Get the elements
-        const openPopup = document.getElementById('openPopup');
         const closePopup = document.getElementById('closePopup');
         const popup = document.getElementById('popup');
 
-        if (!openPopup || !closePopup || !popup) {
-            console.error("Some elements could not be found!");
-            return;
-        }
+        
 
         popup.classList.remove('hidden');
 
