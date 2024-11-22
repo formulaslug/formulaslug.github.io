@@ -81,26 +81,6 @@
     </div>
 </div>
 
-<!--GIVING DAY ADDITIONS START HERE -->
-
-
-  <!-- The Popup -->
-  <div id="popup" class="popup hidden">
-    <div class="popup-content">
-      <span id="closePopup" class="close">&times;</span>
-      <h3 class="giving_title">Giving Day is Here!</h3>
-      <img src="fs_team_cornucopia.jpg" width="40%">
-      <p class="giving_desc"> Giving Day is a  24-hour fundraising event for organizations at UC Santa Cruz, and we're excited to be a part of it! <br>
-        This event is extremely important to the future of our club. Giving Day has historically been our largest source of funding, and it is this support that makes our project possible. Our fundraising goal for this year is 20 thousand dollars, between community donations and event challenges.
-
-        The money raised during Giving Day is the difference between having a basic, rules-passing car, or one that we're able to take to the next level and incrementally improve on a year-by-year basis.<br>
-        <b>Even a small donation, starting at $5, can make a huge difference for our team! </b> 
-        <br> If you'd like to help, here's the link to donate: <a href="https://give.ucsc.edu/schools/UniversityofCaliforniaSantaCruz/giving-day-2024/pages/formula-slug/?a=8831002" target="_blank">Formula Slug Giving Day</a> Thank you so much for considering!
-      </p>
-    </div>
-  </div>
-
-<!--END OF GIVING DAY ADDITIONS  -->
 
 <div class="main-section">
     <h2>What is Formula Slug?</h2>
@@ -138,42 +118,6 @@
         
 </script>
 
-<!--START OF GIVING DAY SCRIPT-->
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        
-
-        // Get the elements
-        const closePopup = document.getElementById('closePopup');
-        const popup = document.getElementById('popup');
-
-        
-
-        popup.classList.remove('hidden');
-
-        if (!sessionStorage.getItem('popupShown')) {
-            // If not, show the popup
-            popup.classList.remove('hidden');
-            sessionStorage.setItem('popupShown', 'true'); // Mark it as shown
-        }
-
-        // Event listener for closing the popup
-        closePopup.addEventListener('click', (e) => {
-            console.log("Closing popup..."); // Debugging log
-            popup.classList.add('hidden'); // Hide the popup
-            e.stopPropagation(); // Prevent event from bubbling up
-        });
-
-        // Close popup if clicked outside
-        window.addEventListener('click', (e) => {
-            if (e.target === popup) {
-                console.log("Closing popup due to background click..."); // Debugging log
-                popup.classList.add('hidden'); // Hide the popup
-            }
-        });
-    });
-</script>
-<!--END OF GIVING DAY SCRIPT-->
 
 
 </body>
