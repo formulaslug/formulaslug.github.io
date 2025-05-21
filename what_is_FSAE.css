@@ -440,6 +440,17 @@ p {
     padding: 1% 0;
 }
 
+.policy_state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: scandia-web;
+    font-style: italic;
+    font-size: 1em;
+    padding: 1% 0;
+    background-color: #141624;
+}
+
 @media screen and (max-width: 600px) {
     .socials {
         flex-direction: row; /* Stack social icons */
@@ -451,6 +462,10 @@ p {
     }
 
     .copyright {
+        font-size: 0.8em; /* Smaller copyright text */
+    }
+
+    .policy_state {
         font-size: 0.8em; /* Smaller copyright text */
     }
 }
